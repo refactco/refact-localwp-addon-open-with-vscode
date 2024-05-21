@@ -47,21 +47,4 @@ export default function (context: LocalMain.AddonMainContext): void {
 		return checkIfInstalled(command);
 	});
 
-	ipcMain.handle('check-phpstorm-installed', async () => {
-		const command = process.platform === 'win32' ? 'where phpstorm' : 'which phpstorm';
-		return checkIfInstalled(command);
-	});
-
-	ipcMain.on('open-in-phpstorm', (event, projectDir) => {
-		let absolutePath = projectDir;
-		if (projectDir.startsWith('~')) {
-			const homeDir = os.homedir();
-			absolutePath = path.join(homeDir, projectDir.slice(2));
-		} else {
-			absolutePath = path.resolve(projectDir);
-		}
-		const phpstormUrl = `phpstorm://open?file=${absolutePath}`;
-		shell.openExternal(phpstormUrl);
-		logger.log('info', `Opening project directory in PhpStorm: ${absolutePath}`);
-	});
 }
