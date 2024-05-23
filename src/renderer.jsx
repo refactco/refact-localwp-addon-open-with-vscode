@@ -16,7 +16,7 @@ export default function (context) {
 	hooks.addFilter('siteInfoToolsItem', (menu) => [
 		...menu,
 		{
-			menuItem: 'OpenInCodeEditor',
+			menuItem: 'Open With Vs Code',
 			path: `/${addonID}`,
 			render: (props) => <Boilerplate {...props} />,
 		},
