@@ -31,7 +31,7 @@ export default function (context: LocalMain.AddonMainContext): void {
 		} else {
 			absolutePath = path.resolve(projectDir);
 		}
-		const vscodeUrl = `vscode://file/${absolutePath}`;
+		const vscodeUrl = `vscode://file/${absolutePath}/app/public`;
 		shell.openExternal(vscodeUrl);
 		logger.log('info', `Opening project directory in VS Code: ${absolutePath}`);
 	});
@@ -43,8 +43,20 @@ export default function (context: LocalMain.AddonMainContext): void {
 	});
 
 	ipcMain.handle('check-vscode-installed', async () => {
-		const command = process.platform === 'win32' ? 'where code' : 'which code';
-		return checkIfInstalled(command);
+		let command = '';
+		switch (process.platform) {
+			case 'win32':
+				command = 'code --version';
+				break;
+			case 'darwin':
+				command = 'open -a "Visual Studio Code"';
+				break;
+			default:
+				command = 'code --version';
+				break;
+		}
+
+		return await checkIfInstalled(command);
 	});
 
 }
