@@ -1,26 +1,21 @@
 {
-  "name": "open-with-vscode-localwp-addon",
-  "productName": "Open With VsCode LocalWp Addon",
+  "name": "vscode-localwp-addon",
+  "productName": "VSCode LocalWP Addon",
   "version": "1.0.0",
   "author": {
-    "name": "Refact Developers",
+    "name": "Refact",
     "email": "dev@refact.co",
-    "url": "https://refact.com"
+    "url": "https://refact.co"
   },
-  "contributors": [
-    {
-      "name": "Mahid Hassanzadeh",
-      "email": "mahdi.ha@refact.co"
-    }
-  ],
   "keywords": [
     "localwp",
-    "add-on"
+    "vscode",
+    "addon"
   ],
   "bgColor": "#51bb7b",
   "icon": "icon.svg",
-  "slug": "open-with-vscode-localwp-addon",
-  "description": "Open project directly with vscode addon",
+  "slug": "vscode-localwp-addon",
+  "description": "Addon to open projects directly in VSCode",
   "renderer": "lib/renderer.js",
   "main": "lib/main.js",
   "license": "MIT",
