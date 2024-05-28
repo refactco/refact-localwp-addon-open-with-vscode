@@ -1,6 +1,6 @@
 {
   "name": "vscode-localwp-addon",
-  "productName": "VSCode",
+  "productName": "VS Code",
   "version": "1.0.0",
   "author": {
     "name": "Refact",
@@ -15,7 +15,7 @@
   "bgColor": "#51bb7b",
   "icon": "icon.svg",
   "slug": "vscode-localwp-addon",
-  "description": "Addon to open projects directly in VSCode",
+  "description": "Instantly open project in VS Code",
   "renderer": "lib/renderer.js",
   "main": "lib/main.js",
   "license": "MIT",
@@ -23,6 +23,8 @@
     "build": "tsc",
     "prepare": "tsc",
     "watch": "yarn run build --watch",
+    "link": "sh ./npm/scripts/symlink.sh",
+    "unlink": "sh ./npm/scripts/unlink.sh",
     "lint": "eslint ."
   },
   "devDependencies": {
