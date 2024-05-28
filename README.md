@@ -1,6 +1,7 @@
 # Open with VS Code - LocalWP Add-on by Refact
 Instantly open project in Visual Studio Code with a single click.
-![image](https://github.com/refactco/refact-localwp-addon-open-with-vscode/assets/107167473/4fcc1ab5-5ab4-4484-8aa1-a4f5dd10e375)
+![image](https://github.com/refactco/refact-localwp-addon-open-with-vscode/assets/107167473/f6bb2b98-8b24-4c5a-a3d0-1078a01bf10a)
+
 
 
 ## Install
