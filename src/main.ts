@@ -6,20 +6,14 @@ import * as os from 'os';
 import { exec } from 'child_process';
 
 export default function (context: LocalMain.AddonMainContext): void {
-	// The context object allows us to interact with various parts of Electron's main thread.
 	const { electron } = context;
 	const { ipcMain } = electron;
 
 	const { localLogger } = LocalMain.getServiceContainer().cradle;
 
-	// Local uses Winston for logging which means we can create create child
-	// loggers with additional metadata. For example, the below child logger
-	// will log something like this within the Local log:
-	//
-	// {"thread":"main","addon":"boilerplate","level":"info","message":"Saving count 47 for site 5efOKun5u.","timestamp":"2022-12-21T16:43:40.515Z"}
 	const logger = localLogger.child({
 		thread: 'main',
-		addon: 'boilerplate',
+		addon: 'open-in-vscode',
 	});
 
 	ipcMain.on('open-in-vscode', (event, projectDir) => {
