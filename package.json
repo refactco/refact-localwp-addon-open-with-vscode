@@ -12,7 +12,7 @@
     "vscode",
     "addon"
   ],
-  "bgColor": "#51bb7b",
+  "bgColor": "#013233",
   "icon": "icon.svg",
   "slug": "vscode-localwp-addon",
   "description": "Instantly open project in VS Code",
