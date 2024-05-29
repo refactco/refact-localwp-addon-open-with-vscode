@@ -49,7 +49,7 @@ export default function (context: LocalMain.AddonMainContext): void {
 				command = 'code --version';
 				break;
 			case 'darwin':
-				command = 'which code';
+				command = 'open -Ra "Visual Studio Code"';
 				break;
 			default:
 				command = 'code --version';
