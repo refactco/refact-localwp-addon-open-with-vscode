@@ -1,4 +1,4 @@
-# Open with VS Code - LocalWP Add-on by Refact
+# Open with VS Code - Local WP Add-on by Refact
 Instantly open project in Visual Studio Code with a single click.
 ![image](https://github.com/refactco/refact-localwp-addon-open-with-vscode/assets/107167473/f6bb2b98-8b24-4c5a-a3d0-1078a01bf10a)
 
@@ -10,7 +10,7 @@ Download the `.tgz` file from a [release](https://github.com/refactco/refact-loc
 
 ## Usage
 
-1. Open LocalWP. 
+1. Open Local WP. 
 2. Navigate to the site you want to work on. 
 3. Go to the Overview tab.
 4. Click the "Open With VS Code" button.
@@ -26,7 +26,7 @@ git clone https://github.com/refactco/refact-localwp-addon-open-with-vscode.git
 
 Then, cd into the repo and run `npm run link` and it will automatically symlink to your Local addons folder and build the package.
 
-If the `npm run link` didn't work, you should move the add-on folder to your LocalWP add-ons directory.
+If the `npm run link` didn't work, you should move the add-on folder to your Local WP add-ons directory.
 - For Windows: `C:\Users\<YourUsername>\AppData\Roaming\Local\addons`
 - For macOS: `/Users/<YourUsername>/Library/Application Support/Local/addons`
 - For Linux: `~/.config/Local/addons`
